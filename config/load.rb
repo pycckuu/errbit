@@ -25,9 +25,9 @@ Errbit::Config = Configurator.run({
   mongo_url:                 ['MONGOLAB_URI', 'MONGOHQ_URL', 'MONGODB_URL', 'MONGO_URL'],
 
   # github
-  # github_url:                ['GITHUB_URL', ->(values) {
-    # values[:github_url].gsub(/\/*\z/, '')
-  # }],
+  github_url:                ['GITHUB_URL', ->(values) {
+    values[:github_url].gsub(/\/*\z/, '')
+  }],
   github_authentication:     ['GITHUB_AUTHENTICATION'],
   github_client_id:          ['GITHUB_CLIENT_ID'],
   github_secret:             ['GITHUB_SECRET'],
